@@ -28,6 +28,7 @@ async def longxin_call(request: Request) -> dict:
     """
     # 验证身份
     token: str = request.headers.get('Authorization')
+    print(request.client.host)
 
     # 获取参数
     req_params: dict = await request.json()
